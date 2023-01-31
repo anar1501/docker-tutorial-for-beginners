@@ -1,0 +1,1 @@
+1)App-larımızı Docker-da çalışdırmağ vm-dən fərğli olarağ dəqiqə çəkməzki app-mız işə düşsün, lakin vm-də isə app-ı işə salmaq container-dan fərqli olarağ uzun çəkəcəkdir.

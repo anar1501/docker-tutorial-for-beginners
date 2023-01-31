@@ -1,0 +1,49 @@
+1) docker pull imagename -->bu komanda docker hubdan vermiş olduğumuz imagename-ə əsasən image-i öz local serverimizə yükləmiş olur.
+
+2) docker images -->bu komanda local docker bazamızda nə qədər və yaxud hansı image-lər mövcuddur onları göstərməg istifadə olunur
+
+2) docker image ls -->bu komanda birə-bir "docker images" -ın gördüyü işi görməkdədir sadəcə olaraq başqa variantıdır
+
+3) docker run imagename --> bu komanda vasitəsi ilə image-lərimizi çalışdırır
+
+4) docker run -it imagename --> bu komanda container-ı interactive terminalda çalışdırır. Əgər container stdin qəbul edirsə həmən container mütləq şəkildə "-it"  flag-i ilə run olunmalıdır
+
+5) docker ps --> bu komanda up olan container-lərin siyahısını göstərir
+
+6)docker ps -a --> bu komanda hem up hemde down vəziyyətdə olan container-lərin siyahısını göstərir
+
+6) docker ps --all --> bu komanda  yuxarıda yazılan komandanın uzun variantıdır
+
+6) docker container ls -a və yaxud docker container ls --all bunlarda bir növ 6-cı bənddə qeyd olunan komandaların başqa bir varitandır
+
+7) docker run --name container_name image_name
+
+8) docker start container_id-->bu komanda stop olunmuş container-i yenidən start edir
+
+9) docker stop container_id -->bu komanda start olunmuş container-i yenidən stop edir
+
+10) docker rm container_id --> bu komanda stop olunmus container-i silmeg ucundur
+
+10) docker rm -f container_id -->bu komanda ise run olunsa bele container-i silmeg ucundur
+
+10) docker rm $(docker container ls -aq) --> bu komanda ise butun containerleri silmeg ucundur
+
+11) docker rmi image_id --> bu komanda docker image silmeg ucundur
+
+11) docker image tag image_name my_image_name --> bu komanda mövcud image-lara öz adlarımızı verməg üçün istifadə olunur
+
+12) docker run -d image_name -->bu komanda container-i detached modda çalışdıracaqdır. Bu o deməkdir ki, container çalışa çalışa eyni terminal üzərindən həmçinin əlavə docker əməliyyatları da apara bilirəm.
+
+13) docker attach container_id --> bu komanda container-i attached modada çalışdırır. By default Docker bütün container-ləri attached modda çalışdırır.
+
+14) docker container logs container_id --> bu komanda container də olan logları göstərməg üçün ist olunur. Həmçinin bunun "docker attach container_id" kamandasından fərqi odur ki, indiyə qədər nə var nə yox bütün logları göstərir, ancaq "attach" isə qaldığı yerdən davam etməgdədir.
+
+15) docker run -p 8080:8080 image_name --> bu komanda da olan -p container-ə port verməyimiz deməkdir və bu container-ə biz bu portla bağlanacayığ deməkdir
+
+16) docker volume create volume_name -->bu komanda docker host da volume yaradacaq
+
+17) docker run -p 27017:27017 -v volume_name:/data/db mongo --> bu komanda ise container daxilinde olan "/data/db" folderində olan məlumatları yaratdığımız volume içinə atacaqdır. Beləliklə yenidən container-i run etdiyimiz an data itgisi baş vermiyəcəkdir.
+
+18) docker inspect container_id or image_id --> bu komanda vasitəsi ilə container yaxud image məlumatlarına baxa bilərsiniz.
+
+19) docker container prune --> bütün cotainer-ləri silmə işinə baxır

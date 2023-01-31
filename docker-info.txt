@@ -1,0 +1,1 @@
+1)What is image? image istəyivə uyğun app-vın docker da çalışdırılıa bilməsi üçündür. Məsələn, bu db, web-app,desktope-app,mobile-app və s. işə düşəcək hərşey ola bilər.
